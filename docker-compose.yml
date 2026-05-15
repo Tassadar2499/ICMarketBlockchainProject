@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Blockchains: Data Source=/app/data/blockchains.db
+      BlockCypher__ApiToken: ${BLOCKCYPHER_API_TOKEN:-}
+      SnapshotWorker__Enabled: "true"
+      SnapshotWorker__Interval: "00:05:00"
+    volumes:
+      - blockchains-data:/app/data
+
+  tests:
+    image: mcr.microsoft.com/dotnet/sdk:10.0
+    profiles:
+      - tests
+    working_dir: /src
+    volumes:
+      - .:/src
+    command: dotnet test ICMarkets.Blockchains.sln
+
+volumes:
+  blockchains-data:

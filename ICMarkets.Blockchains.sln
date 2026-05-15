@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICMarkets.Blockchains.Api", "src\ICMarkets.Blockchains.Api\ICMarkets.Blockchains.Api.csproj", "{53D8F50B-5115-4D9C-B52B-DB4F7F46B881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICMarkets.Blockchains.Application", "src\ICMarkets.Blockchains.Application\ICMarkets.Blockchains.Application.csproj", "{28159012-91D3-4A51-8856-E34F5B84E46B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICMarkets.Blockchains.Domain", "src\ICMarkets.Blockchains.Domain\ICMarkets.Blockchains.Domain.csproj", "{01BDF175-D513-4B5F-B483-93BE82D1435E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICMarkets.Blockchains.Infrastructure", "src\ICMarkets.Blockchains.Infrastructure\ICMarkets.Blockchains.Infrastructure.csproj", "{2ED7D37F-C337-4682-B99C-5B2D1AE65A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICMarkets.Blockchains.UnitTests", "tests\ICMarkets.Blockchains.UnitTests\ICMarkets.Blockchains.UnitTests.csproj", "{C24318B8-6598-428A-A4E9-CBB7CB81D42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICMarkets.Blockchains.IntegrationTests", "tests\ICMarkets.Blockchains.IntegrationTests\ICMarkets.Blockchains.IntegrationTests.csproj", "{C425FB42-E872-45C5-87F5-D3C51BC0B55D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53D8F50B-5115-4D9C-B52B-DB4F7F46B881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D8F50B-5115-4D9C-B52B-DB4F7F46B881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D8F50B-5115-4D9C-B52B-DB4F7F46B881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D8F50B-5115-4D9C-B52B-DB4F7F46B881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28159012-91D3-4A51-8856-E34F5B84E46B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28159012-91D3-4A51-8856-E34F5B84E46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28159012-91D3-4A51-8856-E34F5B84E46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28159012-91D3-4A51-8856-E34F5B84E46B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BDF175-D513-4B5F-B483-93BE82D1435E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BDF175-D513-4B5F-B483-93BE82D1435E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BDF175-D513-4B5F-B483-93BE82D1435E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BDF175-D513-4B5F-B483-93BE82D1435E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED7D37F-C337-4682-B99C-5B2D1AE65A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED7D37F-C337-4682-B99C-5B2D1AE65A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED7D37F-C337-4682-B99C-5B2D1AE65A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED7D37F-C337-4682-B99C-5B2D1AE65A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24318B8-6598-428A-A4E9-CBB7CB81D42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24318B8-6598-428A-A4E9-CBB7CB81D42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24318B8-6598-428A-A4E9-CBB7CB81D42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24318B8-6598-428A-A4E9-CBB7CB81D42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C425FB42-E872-45C5-87F5-D3C51BC0B55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C425FB42-E872-45C5-87F5-D3C51BC0B55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C425FB42-E872-45C5-87F5-D3C51BC0B55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C425FB42-E872-45C5-87F5-D3C51BC0B55D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

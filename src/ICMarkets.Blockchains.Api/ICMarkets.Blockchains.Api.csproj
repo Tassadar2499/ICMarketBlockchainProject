@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>ICMarkets.Blockchains.Api</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ICMarkets.Blockchains.Application\ICMarkets.Blockchains.Application.csproj" />
+    <ProjectReference Include="..\ICMarkets.Blockchains.Infrastructure\ICMarkets.Blockchains.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
