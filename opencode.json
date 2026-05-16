@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "workflow-orchestrator",
+  "agent": {
+    "build": {
+      "permission": {
+        "task": {
+          "*": "ask",
+          "general": "allow",
+          "explore": "allow",
+        }
+      }
+    }
+  }
+}
