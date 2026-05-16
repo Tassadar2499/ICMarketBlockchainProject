@@ -10,6 +10,7 @@ This is a .NET 10 Web API solution organized around Clean Architecture.
 - `src/ICMarkets.Blockchains.Api`: controllers, Swagger, health checks, configuration, and HTTP response models.
 - `tests/ICMarkets.Blockchains.UnitTests`: domain, strategy, and client unit tests.
 - `tests/ICMarkets.Blockchains.IntegrationTests`: in-memory API tests using SQLite and a mocked BlockCypher server.
+- `doc/base`: reference docs for [architecture](doc/base/architecture.md) and [runtime logic](doc/base/logic.md).
 
 Keep dependencies flowing inward: API and Infrastructure can reference Application; Application should depend on abstractions and Domain behavior, not infrastructure details.
 
