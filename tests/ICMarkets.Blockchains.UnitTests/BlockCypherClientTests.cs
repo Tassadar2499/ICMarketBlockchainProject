@@ -31,7 +31,7 @@ public sealed class BlockCypherClientTests
         var handler = new RecordingHttpMessageHandler(HttpStatusCode.OK, "not-json");
         var client = new BlockCypherClient(new HttpClient(handler), Options.Create(new BlockCypherOptions()));
 
-        await Assert.ThrowsAsync<JsonException>(() => client.FetchSnapshotJsonAsync(
+        await Assert.ThrowsAnyAsync<JsonException>(() => client.FetchSnapshotJsonAsync(
             new BlockchainSource("eth", "main", "https://api.blockcypher.com/v1/eth/main")));
     }
 
