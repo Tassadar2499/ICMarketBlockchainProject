@@ -18,6 +18,8 @@ public sealed class BlockchainsController(
     IQueryHandler<GetBlockchainSnapshotHistoryQuery, Result<PagedResult<BlockchainSnapshotDto>>> getHistoryHandler)
     : ControllerBase
 {
+    private const string GetHistoryRouteName = "GetBlockchainSnapshotHistory";
+
     [HttpPost("{chain}/{network}/snapshots")]
     [ProducesResponseType(typeof(BlockchainSnapshotResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
@@ -36,8 +38,8 @@ public sealed class BlockchainsController(
         }
 
         var response = ToResponse(result.Value);
-        return CreatedAtAction(
-            nameof(GetHistoryAsync),
+        return CreatedAtRoute(
+            GetHistoryRouteName,
             new { chain = response.Chain, network = response.Network },
             response);
     }
@@ -55,7 +57,7 @@ public sealed class BlockchainsController(
             result.Failures.Select(ToFailureResponse).ToArray()));
     }
 
-    [HttpGet("{chain}/{network}/snapshots")]
+    [HttpGet("{chain}/{network}/snapshots", Name = GetHistoryRouteName)]
     [ProducesResponseType(typeof(PagedResponse<BlockchainSnapshotResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<PagedResponse<BlockchainSnapshotResponse>>> GetHistoryAsync(
